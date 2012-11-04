@@ -15,7 +15,7 @@ class TwoDArray {
  int numCol;
  T** twoda; 
  T** tempa; 
-
+ T rdef;
 
 
  public:

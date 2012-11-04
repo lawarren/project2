@@ -5,12 +5,15 @@ template <typename T>
 class Node {
  private:
   T value;
-  Node<T>* next;
+  Node<T>* nextCol;
+  Node<T>* nextRow;
 
  public:
   Node<T>(T v);
   T getValue();
-  Node<T>*& getNext();
-  void setNext(Node<T>& n);
+  Node<T>*& getNextCol();
+  Node<T>*& getNextRow();
+  void setNextRow(Node<T>& r);
+  void setNextCol(Node<T>& c);
 };
 #endif

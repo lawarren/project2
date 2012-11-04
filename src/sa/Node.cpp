@@ -4,7 +4,8 @@
 template <typename T>
 Node<T>::Node(T v) {
   value = v;
-  next = 0;
+  nextRow = 0;
+  nextCol = 0;
 }
 
 template <typename T>
@@ -13,13 +14,25 @@ T Node<T>::getValue() {
 }
 
 template <typename T>
-Node<T>*& Node<T>::getNext() {
-  return next;
+Node<T>*& Node<T>::getNextCol() {
+  return nextCol;
 }
 
 template <typename T>
-void Node<T>::setNext(Node<T>& n) {
-  next = &n;
+Node<T>*& Node<T>::getNextRow() {
+  return nextRow;
+}
+
+
+template <typename T>
+void Node<T>::setNextRow(Node<T>& r) {
+  nextRow = &r;
+}
+
+
+template <typename T>
+void Node<T>::setNextCol(Node<T>& c) {
+  nextCol = &c;
 }
 
 template class Node<int>;

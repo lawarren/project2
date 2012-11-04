@@ -14,9 +14,15 @@
   for (int i = 0; i < r; ++i) {
     twoda[i] = new T[c];
     }
+  
+  for (int i = 0; i < r; ++i) {
+   for (int j = 0; j < c; ++j) {
+    twoda[i][j] = def;
+    }
+   }
    numRow = r;
    numCol = c;
-   
+  rdef = def; 
   }
  
  template<class T>
@@ -45,7 +51,7 @@
          }
        }
      
-     twoda.~TwoDArray();
+//     twoda.~TwoDArray();
 
     T** twoda = new T*[r]; 
      for (int i = 0; i < r; ++i) {
@@ -58,7 +64,7 @@
          }
        }
 
-     tempa.~TwoDArray();
+//     tempa.~TwoDArray();
 
       numRow = r;
       numCol = c;
@@ -79,7 +85,7 @@
    assert ((r < numRow && c < numCol));
    
 
-  twoda[r][c] = NULL;
+  twoda[r][c] = rdef;
   }
   
   template<class T>
@@ -101,3 +107,9 @@
   int TwoDArray<T>::getNumCols(){
    return numCol;
   }
+
+template class TwoDArray<int>;
+template class TwoDArray<double>;
+template class TwoDArray<std::string>;
+
+

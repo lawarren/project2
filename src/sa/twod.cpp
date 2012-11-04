@@ -100,4 +100,4 @@
   template<class T>
   int TwoDArray<T>::getNumCols(){
    return numCol;
-  }
+

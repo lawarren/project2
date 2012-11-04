@@ -6,12 +6,12 @@ SRC = ./src
 CPP = g++
 CPPFLAGS = -Wall -Wextra
 
-all: $(BUILD)/main $(TEST)/stack_test
+all: $(BUILD)/main $(TEST)/
 
-$(BUILD)/main: $(SRC)/Stack.cpp $(SRC)/Stack.o
+$(BUILD)/main: $(SRC)/vofv/vect.cpp $(SRC)/vofv/vect.o
 	cd $(SRC); $(MAKE)
 
-$(TEST)/stack_test: $(TEST)/Stack.cpp $(SRC)/Stack.o
+$(TEST)/stack_test: $(TEST)/vectTest.cpp $(SRC)/vofv/vect.o
 	cd $(TEST); $(MAKE)
 
 clean:

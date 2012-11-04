@@ -12,6 +12,8 @@ class TwoDArray {
  vector<vector<T> > v;
  T tempvalue; 
  int sizet; 
+ int numRow;
+ int numCol;
 
  public:
   TwoDArray<T>(int r, int c, T def);
