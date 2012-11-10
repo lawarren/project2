@@ -9,10 +9,14 @@ CPPFLAGS = -Wall -Wextra
 all: $(BUILD)/main $(TEST)/
 
 $(BUILD)/main: $(SRC)/vofv/vect.cpp $(SRC)/vofv/vect.o
-	cd $(SRC); $(MAKE)
+	cd $(SRC)/vofv; $(MAKE)
 
-$(TEST)/stack_test: $(TEST)/vectTest.cpp $(SRC)/vofv/vect.o
-	cd $(TEST); $(MAKE)
+$(BUILD)/main: $(SRC)/sa/spall.cpp $(SRC)/sa/spall.o
+	cd $(SRC)/sa; $(MAKE)
+
+$(BUILD)/main: $(SRC)/2da/twod.cpp $(SRC)/2da/twod.o
+	cd $(SRC)/2da; $(MAKE)
+
 
 clean:
 	cd $(SRC); $(MAKE) clean

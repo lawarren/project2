@@ -1,7 +1,7 @@
 #ifndef __TWOD_H__
 #define __TWOD_H__
 #include <iostream>
-
+#include "Node.h"
  
 
 template <class T>
@@ -10,7 +10,8 @@ class TwoDArray {
  T tempvalue; 
  int numRow;
  int numCol;
-
+ Node<T>* frontr;
+ Node<T>* frontc;
 
 
  public:
